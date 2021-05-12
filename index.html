@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Day01 Learning</title>
+</head>
+<body>
+    <div id="shopping-list">
+        <div class="header">
+            <h1>{{ header.toLocaleUpperCase() }}</h1>
+          </div>
+        <div class="add-item-form">
+            <input type="text" v-model="newItem" placeholder="Add an Item" @keyup.enter="saveItem">
+        </div>
+
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+        var vueInstance = new Vue({
+            el: '#shopping-list',
+            data: {
+                header: 'Welcome',
+            },
+            beforecreate: function () {
+                alert('before create');
+            },
+            created: function () {
+                alert('created');
+            },
+            beforemount: function () {
+                alert('before mount');
+            },
+            mounted: function () {
+                alert('mounted');
+            },
+            beforeupdate: function () {
+                alert('before update');
+            },
+            updated: function () {
+                alert('updated');
+            },
+            beforedestroy: function () {
+                alert('before destroy');
+            },
+            destroyed: function () {
+                alert('destroyed');
+            }
+        });
+    </script>
+</body>
+</html>
